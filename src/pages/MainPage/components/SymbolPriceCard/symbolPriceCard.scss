@@ -1,0 +1,31 @@
+@mixin flex-content-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.symbol-price-card-container {
+    text-decoration: none;
+    display: inline-block;
+    width: 300px;
+    height: 100px;
+
+    display: flex;
+    flex-direction: column;
+    
+    border: gray 1px solid;
+}
+
+.card-symbol {
+    color: black;
+    width: 100px;
+    height: 30%;
+
+    @include flex-content-center;
+}
+
+.card-price {
+    height: 70%;
+
+    @include flex-content-center;
+}
