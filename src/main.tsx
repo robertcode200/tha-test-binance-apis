@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import MainPage from './pages/MainPage';
-import KChartPage from './pages/KChartPage';
+import PairDetailPage from './pages/PairDetailPage';
 
 const router = createBrowserRouter([
   {
@@ -11,8 +11,8 @@ const router = createBrowserRouter([
     element: <MainPage />,
   },
   {
-    path: '/kchart',
-    element: <KChartPage />,
+    path: '/pair/:pair',
+    element: <PairDetailPage />,
   }
 ]);
 
