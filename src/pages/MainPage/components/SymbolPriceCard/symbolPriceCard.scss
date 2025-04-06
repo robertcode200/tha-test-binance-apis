@@ -25,6 +25,9 @@
 
 .card-price {
     height: 70%;
-
+    .content {
+        color: #2EBD85;
+    }
+    
     @include flex-content-center;
 }

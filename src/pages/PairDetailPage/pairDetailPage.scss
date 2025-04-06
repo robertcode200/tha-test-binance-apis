@@ -1,0 +1,45 @@
+@mixin flex-content-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pair-detail-page-container {
+    border: red solid 1px;
+
+    max-width: 960px;
+    height: 100vh;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.page-title {
+    margin: 10px;
+    font-size: large;
+}
+
+.top-info-bar {
+    width: 300px;
+    height: 50px;
+
+    display: flex;
+    justify-content: space-around;
+
+    .back-to-home-page-button {
+        width: 150px;
+        padding: 10px;
+
+        @include flex-content-center;
+
+        border: solid 1px gray;
+        border-radius: 8px;
+    }
+
+    .pair-content-container {
+        width: 150px;
+
+        @include flex-content-center;
+    }
+}
+
+.kline-chart-container {}
