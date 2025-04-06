@@ -1,4 +1,5 @@
 import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 const PairDetailPage = () => {
@@ -6,7 +7,11 @@ const PairDetailPage = () => {
     console.log(pair);
 
     return (
-        <div>PairDetailPage</div>
+        
+        <div>
+            <div>PairDetailPage</div>
+            <Link to="/">Back to Home Page</Link>
+        </div>
     );
 };
 
