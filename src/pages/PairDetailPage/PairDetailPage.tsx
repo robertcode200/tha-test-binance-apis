@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 import './pairDetailPage.scss';
+import KLineChart from "./components/KLineChart";
 
 const PairDetailPage = () => {
     const { pair } = useParams<{ pair: string }>();
@@ -15,7 +16,9 @@ const PairDetailPage = () => {
                     <span className="content">Pair: {pair}</span>
                 </div>
             </div>
-            <div className="kline-chart-container">KLine Chart</div>
+            <div className="kline-chart-container">
+                <KLineChart />
+            </div>
         </div>
     );
 };
