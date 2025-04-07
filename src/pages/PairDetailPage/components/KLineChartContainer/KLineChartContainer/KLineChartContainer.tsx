@@ -11,8 +11,6 @@ import KLineChart from '../KLineChart/KLineChart';
 const KLineChartContainer = () => {
     const [selectedInterval, setSelectedInterval] = useState(intervals[0]);
 
-    console.log(selectedInterval);
-
     const intervalSelectId = 'interval-select';
 
     return (
