@@ -1,6 +1,7 @@
 import { memo, useEffect, useRef } from "react";
 import { useParams } from "react-router-dom";
 import { CandlestickSeries, createChart } from 'lightweight-charts';
+import type { UTCTimestamp } from 'lightweight-charts';
 
 import apiUrls from '../../../../../apiUrls';
 import { UiKline } from "./interface";
@@ -13,7 +14,7 @@ type KLineChartProps = {
 function convertUiKlinesToSeriesData (uiKlines: UiKline[]) {
     if (!uiKlines || !uiKlines.length) return [];
     return uiKlines.map(([time, open, high, low, close]) => ({
-        time: time/1000,
+        time: Number(time)/1000 as UTCTimestamp,
         open: Number(open),
         high: Number(high),
         low: Number(low),
