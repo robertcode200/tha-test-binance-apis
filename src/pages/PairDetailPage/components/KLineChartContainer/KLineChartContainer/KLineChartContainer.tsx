@@ -1,13 +1,14 @@
 import { useState } from "react";
 
-import config from './config';
+import config from '../config';
 const {
     intervals
 } = config;
 
-import './kLineChart.scss';
+import './kLineChartContainer.scss';
+import KLineChart from '../KLineChart/KLineChart';
 
-const KLineChart = () => {
+const KLineChartContainer = () => {
     const [selectedInterval, setSelectedInterval] = useState(intervals[0]);
 
     console.log(selectedInterval);
@@ -27,9 +28,9 @@ const KLineChart = () => {
                     {intervals.map(interval => <option key={interval} value={interval}>{interval}</option>)}
                 </select>
             </div>
-            <div>Lightweight Chart: K Line Chart</div>
+            <KLineChart interval={selectedInterval} />
         </div>
     );
 };
 
-export default KLineChart;
+export default KLineChartContainer;
