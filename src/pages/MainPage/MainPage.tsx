@@ -1,6 +1,6 @@
 import apiUrls from '../../apiUrls';
 import { SymbolPrice } from './interface';
-import { useFetchPageData } from "../../hooks";
+import { useFetchData } from "../../hooks";
 import SymbolPriceCard from './components/SymbolPriceCard';
 import './mainPage.scss';
 
@@ -9,7 +9,7 @@ const MainPage = () => {
         data: symbolPrices,
         isLoading,
         error
-    } = useFetchPageData<SymbolPrice[]>(apiUrls.mainPage.getSymbolPriceTicker);
+    } = useFetchData<SymbolPrice[]>(apiUrls.mainPage.getSymbolPriceTicker);
 
     if (isLoading) {
         return <div>Loading...</div>;

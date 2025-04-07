@@ -1,3 +1,3 @@
-import useFetchPageData from './useFetchPageData';
+import useFetchData from './useFetchData';
 
-export { useFetchPageData };
+export { useFetchData };
