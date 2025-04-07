@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import config from '../config';
+import config from './config';
 const {
     intervals
 } = config;
