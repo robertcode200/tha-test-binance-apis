@@ -1,9 +1,3 @@
-@mixin flex-content-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .symbol-price-card-container {
     display: inline-block;
     width: 300px;
@@ -14,20 +8,12 @@
     
     border: gray 1px solid;
     border-radius: 8px;
-}
 
-.card-symbol {
-    width: 100px;
-    height: 30%;
+    display: flex;
+    justify-content: space-around;
 
-    @include flex-content-center;
 }
 
 .card-price {
-    height: 70%;
-    .content {
         color: #2EBD85;
-    }
-    
-    @include flex-content-center;
 }

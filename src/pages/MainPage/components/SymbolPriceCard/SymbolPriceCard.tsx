@@ -12,10 +12,10 @@ const SymbolPriceCard = ({ symbol, price }: SymbolPriceCardProps) => {
     return (
         <Link to={`/pair/${symbol}`} className="symbol-price-card-container">
             <div className="card-symbol">
-                <span className="content">{symbol}</span>
+                {symbol}
             </div>
             <div className="card-price">
-                <span className="content">{price}</span>
+                {price}
             </div>
         </Link>
     );
