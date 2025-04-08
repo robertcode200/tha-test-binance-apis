@@ -83,7 +83,11 @@ const KLineChart = ({ interval }: KLineChartProps) => {
     }
 
     return (
-        <div ref={kLineChartContainerRef} style={{ width: '100%', height: '600px' }} />
+        <>
+            <h1>{symbol}</h1>
+            <div ref={kLineChartContainerRef} style={{ width: '100%', height: '600px' }} />
+        </>
+        
     );
 };
 
