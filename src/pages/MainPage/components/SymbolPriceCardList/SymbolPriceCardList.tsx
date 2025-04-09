@@ -32,6 +32,22 @@ function renderSymbolPriceCards (symbolPrices: SymbolPrice[] | null) {
     );
 }
 
+
+function throttle <T extends unknown[]> (
+    fn: (...args: T) => void,
+    delay = 500
+) {
+    let timer: null | number = null;
+  
+    return (...args: T) => {
+      if (timer) return;
+      timer = setTimeout(() => {
+        fn(...args);
+        timer = null;
+      }, delay);
+    };
+}
+
 const SymbolPriceCardList = () => {
     const {
         data: symbolPrices,
@@ -42,7 +58,7 @@ const SymbolPriceCardList = () => {
     const [sliceCount, setSliceCount] = useState(0);
 
     useEffect(() => {
-        const handleScroll = () => {
+        const loadMore = () => {
             const innerHeight = window.innerHeight;
             const scrollTop = document.documentElement.scrollTop;
             const scrollHeight = document.documentElement.scrollHeight;
@@ -50,6 +66,12 @@ const SymbolPriceCardList = () => {
             if (innerHeight + scrollTop + 1 >= scrollHeight) {
                 setSliceCount(prevCount => prevCount + 1);
             }
+        };
+
+        const throttleLoadMore = throttle(loadMore, 500);
+
+        const handleScroll = () => {
+            throttleLoadMore();
         };
 
         window.addEventListener('scroll', handleScroll);
