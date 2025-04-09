@@ -12,9 +12,9 @@
 ### 1.2. Pair Detail Page
 - User can see the diagram update along with time interval changed.
 ### 1.3. Others
-- ${{\color{red}\Huge{\textsf{  Infinite\ scroll\ on\ Main\ Page\ for\ the\ pair\ cards. \}}}}\$
-- ${{\color{red}\Huge{\textsf{  Throttle on the infinite\ scroll. \}}}}\$
-- ${{\color{red}\Huge{\textsf{  Cache the data in useFetchData majorly for fetching the kline data of different intervals. \}}}}\$
+- ${{\color{red}{\textsf{  Infinite\ scroll\ on\ Main\ Page\ for\ the\ pair\ cards. \}}}}\$
+- ${{\color{red}{\textsf{  Throttle on the infinite\ scroll. \}}}}\$
+- ${{\color{red}{\textsf{  Cache the data in useFetchData majorly for fetching the kline data of different intervals. \}}}}\$
   - i.e.  If you've fetched [BNBETH.klines.1w], and then you switch to the interval 1d,  and later when you switch back to 1w, you don't need to fetch the data again.
 
 ---
