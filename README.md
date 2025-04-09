@@ -1,5 +1,10 @@
 # Tokenize Xchange Initial Screen Quiz
 
+## 0. How to start.
+- `npm run dev`
+
+---
+
 ## 1. Features
 ### 1.1. Main Page
 - Main page have massive currency pairs, information from the Binance RESTful API, within card design.
