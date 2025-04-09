@@ -95,17 +95,14 @@ const SymbolPriceCardList = () => {
         ]);
     }, [symbolPrices, sliceCount]);
 
-    if (isLoading) {
-        return <div>Loading...</div>;
-    }
-
     if (error) {
         return <div>Error...</div>;
     }
 
     return (
         <div className='symbol-price-card-list-container'>
-            {renderSymbolPriceCards(stateSymbolPrices)}
+            {isLoading && <div>Loading...</div>}
+            {!isLoading && renderSymbolPriceCards(stateSymbolPrices)}
         </div>
     );
 };

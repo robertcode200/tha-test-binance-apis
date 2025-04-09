@@ -60,7 +60,6 @@ const KLineChart = ({ interval }: KLineChartProps) => {
             upColor: '#26a69a', downColor: '#ef5350', borderVisible: false, wickUpColor: '#26a69a', wickDownColor: '#ef5350' 
         });
         newSeries.setData(convertUiKlinesToSeriesData(uiKlines));
-        // console.log(convertUiKlinesToSeriesData(uiKlines));
 
         const handleResize = () => {
             if (!kLineChartContainerRef.current) return;
@@ -74,10 +73,6 @@ const KLineChart = ({ interval }: KLineChartProps) => {
         };
     }, [interval, uiKlines]);
 
-    if (isLoading) {
-        return <div>Loading...</div>;
-    }
-
     if (error) {
         return <div>Error...</div>;
     }
@@ -85,9 +80,9 @@ const KLineChart = ({ interval }: KLineChartProps) => {
     return (
         <>
             <h1>{symbol}</h1>
-            <div ref={kLineChartContainerRef} style={{ width: '100%', height: '600px' }} />
+            {isLoading && <div>Loading...</div>}
+            {!isLoading && <div ref={kLineChartContainerRef} style={{ width: '100%', height: '600px' }} />}
         </>
-        
     );
 };
 
