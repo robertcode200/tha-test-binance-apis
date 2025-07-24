@@ -1,4 +1,4 @@
-# Tokenize Xchange Initial Screen Quiz
+# Test Binance Apis
 
 ## 0. How to start.
 - `npm run dev`
